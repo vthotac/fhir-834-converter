@@ -96,13 +96,6 @@ The converter expects 834 files with segments on a single line separated by `~`:
 ISA*00*...*~GS*BE*...*~ST*834*...*~NM1*IL*1*THOTA*VENKATESH~DMG*D8*19800115*M~REF*0F*MBR-2024-001~HD*025**HLT*MEDICAL~DTP*348*D8*20250101~...
 ```
 
-## Interview Talking Points
-
-**Technical**: "I built a Python-based 834-to-FHIR converter that parses X12 enrollment transactions and creates FHIR R4 Patient and Coverage resources. The parser handles multi-plan scenarios where a single member has Medical + Dental + Vision coverage - each HD segment generates a separate Coverage resource, all referencing the same Patient via FHIR references."
-
-**Business**: "For payers implementing CMS Patient Access APIs, the critical challenge is bridging 18 years of EDI enrollment data to FHIR. This converter automates that transformation, handling 50K+ monthly 834 transactions with duplicate detection via SSN search and edge case handling for missing data."
-
-**Edge Case**: "If REF*0F subscriber ID is missing, the converter logs a warning but proceeds - the Patient will have SSN-only identification. This triggers a data stewardship workflow in production, but doesn't block member enrollment."
 
 ## Technologies
 
