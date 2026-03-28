@@ -115,5 +115,4 @@ This project was developed using modern AI-assisted development practices. AI to
 MIT License - Feel free to use this for learning or adapt for your own projects.
 
 ## Author
-
 Built as part of FHIR integration learning for healthcare payer interoperability projects.
